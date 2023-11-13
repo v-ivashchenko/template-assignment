@@ -10,8 +10,10 @@ class TopRatedMoviesPresenter {
     private let client: HTTPClient
     private let imageCache: ImageCache
     
+    private var movies = [TopRatedMoviesCellViewModel]()
+    
     // MARK: - Public properties
-    private(set) var movies = [TopRatedMoviesCellViewModel]()
+    private(set) var filteredMovies = [TopRatedMoviesCellViewModel]()
     
     weak var view: TopRatedMoviesViewProtocol?
     
@@ -23,7 +25,7 @@ class TopRatedMoviesPresenter {
     
     // MARK: - Public methods
     func numberOfRowsInSection(_ section: Int) -> Int {
-        movies.count
+        filteredMovies.count
     }
     
     func cellForRowAt(
@@ -38,7 +40,7 @@ class TopRatedMoviesPresenter {
             }
         }
         
-        return movies[indexPath.row]
+        return filteredMovies[indexPath.row]
     }
     
     func loadMovies() {
@@ -53,6 +55,7 @@ class TopRatedMoviesPresenter {
             self.movies = movies.results.map {
                 .init(title: $0.title, imagePath: $0.posterPath, rating: $0.voteAverage)
             }
+            self.filteredMovies = self.movies
             
             await MainActor.run {
                 view?.reloadData()
@@ -62,17 +65,29 @@ class TopRatedMoviesPresenter {
     }
     
     func filter(by searchText: String) {
+        if searchText.isEmpty {
+            filteredMovies = movies
+        } else {
+            filteredMovies = movies
+                .filter { $0.title.lowercased().contains(searchText.lowercased()) }
+        }
         
+        view?.reloadData()
+    }
+    
+    func resetSearch() {
+        filteredMovies = movies
+        view?.reloadData()
     }
     
     // MARK: - Private methods
     private func loadImage(at indexPath: IndexPath) async throws -> UIImage {
-        let movie = movies[indexPath.row]
+        let movie = filteredMovies[indexPath.row]
         
         if let image = try await imageCache.image(by: movie.imagePath) {
             var viewModel = movie
             viewModel.image = image
-            movies[indexPath.row] = viewModel
+            filteredMovies[indexPath.row] = viewModel
             
             return image
         } else {
@@ -84,7 +99,7 @@ class TopRatedMoviesPresenter {
             
             var viewModel = movie
             viewModel.image = image
-            movies[indexPath.row] = viewModel
+            filteredMovies[indexPath.row] = viewModel
             
             return image
         }

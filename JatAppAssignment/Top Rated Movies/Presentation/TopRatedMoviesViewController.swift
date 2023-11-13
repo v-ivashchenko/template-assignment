@@ -69,6 +69,7 @@ class TopRatedMoviesViewController: UIViewController {
     // MARK: - IBActions
     @objc private func refreshControlValueChanged(sender: UIRefreshControl) {
         presenter.loadMovies()
+        searchController.isActive = false
     }
 }
 
@@ -123,7 +124,7 @@ extension TopRatedMoviesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let movie = presenter.movies[indexPath.row]
+        let movie = presenter.filteredMovies[indexPath.row]
         guard let viewController = onSelectMovie?(movie) else { return }
         show(viewController, sender: self)
     }
