@@ -33,8 +33,10 @@ final class InMemoryImageCacheTests: XCTestCase {
     }
     
     // MARK: - Helpers
-    private func makeSUT() -> ImageCache {
+    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> ImageCache {
         let sut = InMemoryImageCache()
+        
+        trackForMemoryLeaks(sut, file: file, line: line)
         
         return sut
     }
