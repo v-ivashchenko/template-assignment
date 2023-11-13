@@ -31,6 +31,7 @@ class TopRatedMoviesViewController: UIViewController {
         
         configureView()
         configureTableView()
+        loadMovies()
     }
     
     // MARK: - Private methods
@@ -56,6 +57,10 @@ class TopRatedMoviesViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
+    }
+    
+    private func loadMovies() {
+        presenter.loadMovies()
     }
     
     // MARK: - IBActions
