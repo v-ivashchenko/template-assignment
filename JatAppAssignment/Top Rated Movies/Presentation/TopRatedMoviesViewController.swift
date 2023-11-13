@@ -10,6 +10,18 @@ class TopRatedMoviesViewController: UIViewController {
     private let tableView = UITableView()
     private let refreshControl = UIRefreshControl()
     
+    private let presenter: TopRatedMoviesPresenter
+    
+    // MARK: - Initialization
+    init(presenter: TopRatedMoviesPresenter) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +56,23 @@ class TopRatedMoviesViewController: UIViewController {
     
     // MARK: - IBActions
     @objc private func refreshControlValueChanged(sender: UIRefreshControl) {
-        
+        presenter.loadMovies()
+    }
+}
+
+// MARK: - TopRatedMoviesViewProtocol
+extension TopRatedMoviesViewController: TopRatedMoviesViewProtocol {
+    
+    func startLoading() {
+        refreshControl.beginRefreshing()
+    }
+    
+    func stopLoading() {
+        refreshControl.endRefreshing()
+    }
+    
+    func reloadData() {
+        tableView.reloadData()
     }
 }
 
@@ -52,13 +80,13 @@ class TopRatedMoviesViewController: UIViewController {
 extension TopRatedMoviesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        20
+        presenter.numberOfRowsInSection(section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TopRatedMoviesCell.reuseIdentifier, for: indexPath) as! TopRatedMoviesCell
         
-        cell.configure(with: .init(title: "Title", imagePath: "", rating: 5))
+        cell.configure(with: presenter.cellForRowAt(indexPath: indexPath))
         
         return cell
     }
