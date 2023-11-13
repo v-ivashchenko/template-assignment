@@ -8,6 +8,7 @@ class TopRatedMoviesViewController: UIViewController {
 
     // MARK: - Private properties
     private let tableView = UITableView()
+    private let refreshControl = UIRefreshControl()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -21,10 +22,13 @@ class TopRatedMoviesViewController: UIViewController {
     private func configureView() {
         title = "Top Rated Movies"
         view.backgroundColor = .systemBackground
+        
+        refreshControl.addTarget(self, action: #selector(refreshControlValueChanged), for: .valueChanged)
     }
     
     private func configureTableView() {
         tableView.dataSource = self
+        tableView.refreshControl = refreshControl
         tableView.register(TopRatedMoviesCell.self, forCellReuseIdentifier: TopRatedMoviesCell.reuseIdentifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -36,6 +40,11 @@ class TopRatedMoviesViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
+    }
+    
+    // MARK: - IBActions
+    @objc private func refreshControlValueChanged(sender: UIRefreshControl) {
+        
     }
 }
 
