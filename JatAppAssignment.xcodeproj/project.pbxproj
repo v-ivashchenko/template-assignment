@@ -31,7 +31,7 @@
 		FA0FAFBD2B0253C600804B3A /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFBC2B0253C600804B3A /* URLSessionHTTPClient.swift */; };
 		FA0FAFC22B027F9D00804B3A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFC12B027F9D00804B3A /* ImageCache.swift */; };
 		FA0FAFC42B02823500804B3A /* InMemoryImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFC32B02823500804B3A /* InMemoryImageCache.swift */; };
-		FA0FAFCD2B02B40000804B3A /* JatAppAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFCC2B02B40000804B3A /* JatAppAssignmentTests.swift */; };
+		FA0FAFCD2B02B40000804B3A /* InMemoryImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFCC2B02B40000804B3A /* InMemoryImageCacheTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +72,7 @@
 		FA0FAFC12B027F9D00804B3A /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		FA0FAFC32B02823500804B3A /* InMemoryImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryImageCache.swift; sourceTree = "<group>"; };
 		FA0FAFCA2B02B40000804B3A /* JatAppAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JatAppAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA0FAFCC2B02B40000804B3A /* JatAppAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JatAppAssignmentTests.swift; sourceTree = "<group>"; };
+		FA0FAFCC2B02B40000804B3A /* InMemoryImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryImageCacheTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,9 +274,25 @@
 		FA0FAFCB2B02B40000804B3A /* JatAppAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA0FAFCC2B02B40000804B3A /* JatAppAssignmentTests.swift */,
+				FA0FAFD32B02B5E100804B3A /* Top Rated Movies */,
 			);
 			path = JatAppAssignmentTests;
+			sourceTree = "<group>";
+		};
+		FA0FAFD32B02B5E100804B3A /* Top Rated Movies */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FAFD42B02B98800804B3A /* Persistence */,
+			);
+			path = "Top Rated Movies";
+			sourceTree = "<group>";
+		};
+		FA0FAFD42B02B98800804B3A /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FAFCC2B02B40000804B3A /* InMemoryImageCacheTests.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,7 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA0FAFCD2B02B40000804B3A /* JatAppAssignmentTests.swift in Sources */,
+				FA0FAFCD2B02B40000804B3A /* InMemoryImageCacheTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
