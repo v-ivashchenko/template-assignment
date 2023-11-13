@@ -12,6 +12,9 @@ class TopRatedMoviesViewController: UIViewController {
     
     private let presenter: TopRatedMoviesPresenter
     
+    // MARK: - Public properties
+    var onSelectMovie: ((TopRatedMoviesCellViewModel) -> UIViewController)?
+    
     // MARK: - Initialization
     init(presenter: TopRatedMoviesPresenter) {
         self.presenter = presenter
@@ -96,4 +99,11 @@ extension TopRatedMoviesViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension TopRatedMoviesViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let movie = presenter.cellForRowAt(indexPath: indexPath)
+        guard let viewController = onSelectMovie?(movie) else { return }
+        show(viewController, sender: self)
+    }
 }
