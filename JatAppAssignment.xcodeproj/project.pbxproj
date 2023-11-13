@@ -18,6 +18,7 @@
 		FA0FAF932B022A1100804B3A /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF922B022A1100804B3A /* Design.swift */; };
 		FA0FAF952B022A4C00804B3A /* TopRatedMoviesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF942B022A4C00804B3A /* TopRatedMoviesCell.swift */; };
 		FA0FAF972B022A9500804B3A /* TopRatedMoviesCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF962B022A9500804B3A /* TopRatedMoviesCellViewModel.swift */; };
+		FA0FAFA42B0246ED00804B3A /* UserScoreRatingViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFA32B0246ED00804B3A /* UserScoreRatingViewRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FA0FAF922B022A1100804B3A /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 		FA0FAF942B022A4C00804B3A /* TopRatedMoviesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesCell.swift; sourceTree = "<group>"; };
 		FA0FAF962B022A9500804B3A /* TopRatedMoviesCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesCellViewModel.swift; sourceTree = "<group>"; };
+		FA0FAFA32B0246ED00804B3A /* UserScoreRatingViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScoreRatingViewRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				FA0FAF8A2B0227AE00804B3A /* Shared */,
 				FA0FAF7B2B02184400804B3A /* Supporting Files */,
 				FA0FAF7C2B021FCD00804B3A /* Top Rated Movies */,
+				FA0FAFA12B0246D700804B3A /* Top Rated Movies Detail */,
 			);
 			path = JatAppAssignment;
 			sourceTree = "<group>";
@@ -134,6 +137,22 @@
 			isa = PBXGroup;
 			children = (
 				FA0FAF922B022A1100804B3A /* Design.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FA0FAFA12B0246D700804B3A /* Top Rated Movies Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FAFA22B0246E200804B3A /* Presentation */,
+			);
+			path = "Top Rated Movies Detail";
+			sourceTree = "<group>";
+		};
+		FA0FAFA22B0246E200804B3A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FAFA32B0246ED00804B3A /* UserScoreRatingViewRepresentable.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -216,6 +235,7 @@
 				FA0FAF952B022A4C00804B3A /* TopRatedMoviesCell.swift in Sources */,
 				FA0FAF902B02289C00804B3A /* UserScoreRatingViewModel.swift in Sources */,
 				FA0FAF812B02240800804B3A /* UserScoreRatingView.swift in Sources */,
+				FA0FAFA42B0246ED00804B3A /* UserScoreRatingViewRepresentable.swift in Sources */,
 				FA0FAF8D2B0227C500804B3A /* UIColor+adjustBrightness.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
