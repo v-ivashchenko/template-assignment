@@ -76,7 +76,7 @@ class TopRatedMoviesPresenter {
             
             return image
         } else {
-            let (data, response) = try await client.data(for: GetImageRequest.request(size: .medium, filePath: movie.imagePath))
+            let (data, response) = try await client.data(for: GetImageRequest.request(size: .small, filePath: movie.imagePath))
             let imageData = try GetImageMapper.map(data: data, from: response)
             let image = UIImage(data: imageData)!
             

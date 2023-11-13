@@ -5,12 +5,12 @@
 import UIKit
 
 class TopRatedMoviesCell: UITableViewCell {
-
+    
     // MARK: - Private properties
     private let posterImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 10
+        imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = 50
         imageView.layer.masksToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -81,30 +81,30 @@ class TopRatedMoviesCell: UITableViewCell {
     
     // MARK: - Private methods
     private func configureView() {
-        addSubview(posterImageView)
-        addSubview(userScoreView)
-        addSubview(titleLabel)
-        addSubview(characterOccurrencesLabel)
+        contentView.addSubview(posterImageView)
+        contentView.addSubview(userScoreView)
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(characterOccurrencesLabel)
         
         NSLayoutConstraint.activate([
-            posterImageView.topAnchor.constraint(equalTo: topAnchor, constant: Design.defaultPadding),
-            posterImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Design.defaultPadding),
-            posterImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Design.defaultPadding),
-            posterImageView.heightAnchor.constraint(equalToConstant: 300),
+            posterImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Design.defaultPadding),
+            posterImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Design.defaultPadding),
+            posterImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Design.defaultPadding),
+            posterImageView.heightAnchor.constraint(equalToConstant: 450),
             
+            userScoreView.centerXAnchor.constraint(equalTo: posterImageView.centerXAnchor),
             userScoreView.centerYAnchor.constraint(equalTo: posterImageView.bottomAnchor),
-            userScoreView.leadingAnchor.constraint(equalTo: posterImageView.leadingAnchor, constant: Design.defaultPadding),
             userScoreView.widthAnchor.constraint(equalToConstant: 48),
             userScoreView.heightAnchor.constraint(equalToConstant: 48),
             
             titleLabel.topAnchor.constraint(equalTo: userScoreView.bottomAnchor, constant: Design.defaultPadding),
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Design.defaultPadding),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Design.defaultPadding),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Design.defaultPadding),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Design.defaultPadding),
             
             characterOccurrencesLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
-            characterOccurrencesLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Design.defaultPadding),
-            characterOccurrencesLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Design.defaultPadding),
-            characterOccurrencesLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Design.defaultPadding)
+            characterOccurrencesLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Design.defaultPadding),
+            characterOccurrencesLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Design.defaultPadding),
+            characterOccurrencesLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Design.defaultPadding)
         ])
     }
 }
