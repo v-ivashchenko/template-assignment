@@ -27,6 +27,7 @@
 		FA0FAFB42B02521900804B3A /* GetTopRatedMoviesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFB32B02521900804B3A /* GetTopRatedMoviesRequest.swift */; };
 		FA0FAFB72B02531500804B3A /* GetImageMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFB62B02531500804B3A /* GetImageMapper.swift */; };
 		FA0FAFB92B02531F00804B3A /* GetImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFB82B02531F00804B3A /* GetImageRequest.swift */; };
+		FA0FAFBB2B02539800804B3A /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFBA2B02539800804B3A /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		FA0FAFB32B02521900804B3A /* GetTopRatedMoviesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTopRatedMoviesRequest.swift; sourceTree = "<group>"; };
 		FA0FAFB62B02531500804B3A /* GetImageMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImageMapper.swift; sourceTree = "<group>"; };
 		FA0FAFB82B02531F00804B3A /* GetImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImageRequest.swift; sourceTree = "<group>"; };
+		FA0FAFBA2B02539800804B3A /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 		FA0FAFAE2B02517F00804B3A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				FA0FAFBA2B02539800804B3A /* HTTPClient.swift */,
 				FA0FAFAF2B0251B800804B3A /* Endpoints */,
 			);
 			path = API;
@@ -308,6 +311,7 @@
 				FA0FAFA42B0246ED00804B3A /* UserScoreRatingViewRepresentable.swift in Sources */,
 				FA0FAFA72B02483B00804B3A /* TopRatedMoviesDetailViewModel.swift in Sources */,
 				FA0FAFB22B02520900804B3A /* GetTopRatedMoviesMapper.swift in Sources */,
+				FA0FAFBB2B02539800804B3A /* HTTPClient.swift in Sources */,
 				FA0FAF8D2B0227C500804B3A /* UIColor+adjustBrightness.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
