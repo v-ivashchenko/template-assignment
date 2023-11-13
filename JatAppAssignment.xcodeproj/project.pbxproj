@@ -291,6 +291,7 @@
 				DEVELOPMENT_TEAM = RY7J7JNFL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JatAppAssignment/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JatApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -319,6 +320,7 @@
 				DEVELOPMENT_TEAM = RY7J7JNFL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JatAppAssignment/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JatApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
