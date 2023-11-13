@@ -32,6 +32,7 @@
 		FA0FAFC22B027F9D00804B3A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFC12B027F9D00804B3A /* ImageCache.swift */; };
 		FA0FAFC42B02823500804B3A /* InMemoryImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFC32B02823500804B3A /* InMemoryImageCache.swift */; };
 		FA0FAFCD2B02B40000804B3A /* InMemoryImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFCC2B02B40000804B3A /* InMemoryImageCacheTests.swift */; };
+		FA0FAFD72B02BCB300804B3A /* XCTestCase+trackForMemoryLeaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFD62B02BCB300804B3A /* XCTestCase+trackForMemoryLeaks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		FA0FAFC32B02823500804B3A /* InMemoryImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryImageCache.swift; sourceTree = "<group>"; };
 		FA0FAFCA2B02B40000804B3A /* JatAppAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JatAppAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0FAFCC2B02B40000804B3A /* InMemoryImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryImageCacheTests.swift; sourceTree = "<group>"; };
+		FA0FAFD62B02BCB300804B3A /* XCTestCase+trackForMemoryLeaks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+trackForMemoryLeaks.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 		FA0FAFCB2B02B40000804B3A /* JatAppAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				FA0FAFD52B02BC9D00804B3A /* Shared */,
 				FA0FAFD32B02B5E100804B3A /* Top Rated Movies */,
 			);
 			path = JatAppAssignmentTests;
@@ -293,6 +296,14 @@
 				FA0FAFCC2B02B40000804B3A /* InMemoryImageCacheTests.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		FA0FAFD52B02BC9D00804B3A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FAFD62B02BCB300804B3A /* XCTestCase+trackForMemoryLeaks.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0FAFD72B02BCB300804B3A /* XCTestCase+trackForMemoryLeaks.swift in Sources */,
 				FA0FAFCD2B02B40000804B3A /* InMemoryImageCacheTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
