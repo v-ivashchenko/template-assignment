@@ -16,7 +16,6 @@ struct TopRatedMoviesDetailView: View {
                 placeholderView
             }
         }
-        .foregroundStyle(foregroundColor)
         .padding(Design.defaultPadding)
     }
     
@@ -29,9 +28,10 @@ struct TopRatedMoviesDetailView: View {
             Image(uiImage: image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(maxHeight: 300)
+                .frame(maxHeight: 450)
             
             Text(viewModel.title)
+                .font(.title)
             
             UserScoreRatingViewRepresentable(value: viewModel.rating)
                 .frame(width: 48, height: 48)
@@ -60,6 +60,7 @@ struct TopRatedMoviesDetailView: View {
             
             Spacer()
         }
+        .foregroundStyle(foregroundColor)
     }
 }
 
@@ -69,7 +70,7 @@ struct TopRatedMoviesDetailView: View {
             viewModel: .init(
                 title: "A title",
                 image: UIImage(systemName: "photo"),
-                rating: 9.8
+                rating: 7.5
             )
         )
         
@@ -77,7 +78,7 @@ struct TopRatedMoviesDetailView: View {
             viewModel: .init(
                 title: "A title",
                 image: UIImage(systemName: "photo2"),
-                rating: 9.8
+                rating: 7.5
             )
         )
     }
