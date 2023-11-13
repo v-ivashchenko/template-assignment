@@ -8,6 +8,7 @@ class TopRatedMoviesPresenter {
     
     // MARK: - Private properties
     private let client: HTTPClient
+    private let imageCache: ImageCache
     
     // MARK: - Public properties
     private(set) var movies = [TopRatedMoviesCellViewModel]()
@@ -15,8 +16,9 @@ class TopRatedMoviesPresenter {
     weak var view: TopRatedMoviesViewProtocol?
     
     // MARK: - Initialization
-    init(client: HTTPClient) {
+    init(client: HTTPClient, imageCache: ImageCache) {
         self.client = client
+        self.imageCache = imageCache
     }
     
     // MARK: - Public methods
@@ -62,14 +64,25 @@ class TopRatedMoviesPresenter {
     // MARK: - Private methods
     private func loadImage(at indexPath: IndexPath) async throws -> UIImage {
         let movie = movies[indexPath.row]
-        let (data, response) = try await client.data(for: GetImageRequest.request(size: .medium, filePath: movie.imagePath))
-        let imageData = try GetImageMapper.map(data: data, from: response)
-        let image = UIImage(data: imageData)!
         
-        var viewModel = movie
-        viewModel.image = image
-        movies[indexPath.row] = viewModel
-        
-        return image
+        if let image = try await imageCache.image(by: movie.imagePath) {
+            var viewModel = movie
+            viewModel.image = image
+            movies[indexPath.row] = viewModel
+            
+            return image
+        } else {
+            let (data, response) = try await client.data(for: GetImageRequest.request(size: .medium, filePath: movie.imagePath))
+            let imageData = try GetImageMapper.map(data: data, from: response)
+            let image = UIImage(data: imageData)!
+            
+            try await imageCache.setImage(image, by: movie.imagePath)
+            
+            var viewModel = movie
+            viewModel.image = image
+            movies[indexPath.row] = viewModel
+            
+            return image
+        }
     }
 }

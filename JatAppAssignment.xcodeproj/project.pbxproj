@@ -29,6 +29,8 @@
 		FA0FAFB92B02531F00804B3A /* GetImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFB82B02531F00804B3A /* GetImageRequest.swift */; };
 		FA0FAFBB2B02539800804B3A /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFBA2B02539800804B3A /* HTTPClient.swift */; };
 		FA0FAFBD2B0253C600804B3A /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFBC2B0253C600804B3A /* URLSessionHTTPClient.swift */; };
+		FA0FAFC22B027F9D00804B3A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFC12B027F9D00804B3A /* ImageCache.swift */; };
+		FA0FAFC42B02823500804B3A /* InMemoryImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFC32B02823500804B3A /* InMemoryImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		FA0FAFB82B02531F00804B3A /* GetImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImageRequest.swift; sourceTree = "<group>"; };
 		FA0FAFBA2B02539800804B3A /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		FA0FAFBC2B0253C600804B3A /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		FA0FAFC12B027F9D00804B3A /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		FA0FAFC32B02823500804B3A /* InMemoryImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 			children = (
 				FA0FAFAE2B02517F00804B3A /* API */,
 				FA0FAF8E2B02289500804B3A /* Feature */,
+				FA0FAFC02B027F7000804B3A /* Persistence */,
 				FA0FAF7D2B021FE400804B3A /* Presentation */,
 			);
 			path = "Top Rated Movies";
@@ -227,6 +232,23 @@
 			path = "Get Image";
 			sourceTree = "<group>";
 		};
+		FA0FAFC02B027F7000804B3A /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FAFC12B027F9D00804B3A /* ImageCache.swift */,
+				FA0FAFC52B02825200804B3A /* Implementations */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		FA0FAFC52B02825200804B3A /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FAFC32B02823500804B3A /* InMemoryImageCache.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,8 +329,10 @@
 				FA0FAF6A2B02182600804B3A /* SceneDelegate.swift in Sources */,
 				FA0FAF972B022A9500804B3A /* TopRatedMoviesCellViewModel.swift in Sources */,
 				FA0FAF952B022A4C00804B3A /* TopRatedMoviesCell.swift in Sources */,
+				FA0FAFC42B02823500804B3A /* InMemoryImageCache.swift in Sources */,
 				FA0FAFB42B02521900804B3A /* GetTopRatedMoviesRequest.swift in Sources */,
 				FA0FAFBD2B0253C600804B3A /* URLSessionHTTPClient.swift in Sources */,
+				FA0FAFC22B027F9D00804B3A /* ImageCache.swift in Sources */,
 				FA0FAF902B02289C00804B3A /* UserScoreRatingViewModel.swift in Sources */,
 				FA0FAF812B02240800804B3A /* UserScoreRatingView.swift in Sources */,
 				FA0FAFAD2B024C6B00804B3A /* TopRatedMoviesViewProtocol.swift in Sources */,
