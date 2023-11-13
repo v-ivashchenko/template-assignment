@@ -9,6 +9,7 @@ class TopRatedMoviesViewController: UIViewController {
     // MARK: - Private properties
     private let tableView = UITableView()
     private let refreshControl = UIRefreshControl()
+    private let searchController = UISearchController()
     
     private let presenter: TopRatedMoviesPresenter
     
@@ -36,6 +37,8 @@ class TopRatedMoviesViewController: UIViewController {
     
     // MARK: - Private methods
     private func configureView() {
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
         title = "Top Rated Movies"
         view.backgroundColor = .systemBackground
         
@@ -66,6 +69,16 @@ class TopRatedMoviesViewController: UIViewController {
     // MARK: - IBActions
     @objc private func refreshControlValueChanged(sender: UIRefreshControl) {
         presenter.loadMovies()
+    }
+}
+
+// MARK: - UISearchResultsUpdating
+extension TopRatedMoviesViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text else { return }
+        
+        presenter.filter(by: searchText)
     }
 }
 

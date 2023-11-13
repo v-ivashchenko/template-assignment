@@ -61,6 +61,10 @@ class TopRatedMoviesPresenter {
         }
     }
     
+    func filter(by searchText: String) {
+        
+    }
+    
     // MARK: - Private methods
     private func loadImage(at indexPath: IndexPath) async throws -> UIImage {
         let movie = movies[indexPath.row]
