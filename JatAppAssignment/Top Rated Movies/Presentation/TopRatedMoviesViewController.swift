@@ -40,6 +40,7 @@ class TopRatedMoviesViewController: UIViewController {
     
     private func configureTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.refreshControl = refreshControl
         tableView.register(TopRatedMoviesCell.self, forCellReuseIdentifier: TopRatedMoviesCell.reuseIdentifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -90,4 +91,9 @@ extension TopRatedMoviesViewController: UITableViewDataSource {
         
         return cell
     }
+}
+
+// MARK: - UITableViewDelegate
+extension TopRatedMoviesViewController: UITableViewDelegate {
+    
 }
