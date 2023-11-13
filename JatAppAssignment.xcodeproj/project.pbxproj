@@ -34,6 +34,7 @@
 		FA0FAFCD2B02B40000804B3A /* InMemoryImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFCC2B02B40000804B3A /* InMemoryImageCacheTests.swift */; };
 		FA0FAFD72B02BCB300804B3A /* XCTestCase+trackForMemoryLeaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFD62B02BCB300804B3A /* XCTestCase+trackForMemoryLeaks.swift */; };
 		FA0FAFDA2B02BE2E00804B3A /* TopRatedMoviesCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFD92B02BE2E00804B3A /* TopRatedMoviesCellViewModelTests.swift */; };
+		FA0FAFE02B02D09A00804B3A /* UserScoreRatingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFDF2B02D09A00804B3A /* UserScoreRatingViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		FA0FAFCC2B02B40000804B3A /* InMemoryImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryImageCacheTests.swift; sourceTree = "<group>"; };
 		FA0FAFD62B02BCB300804B3A /* XCTestCase+trackForMemoryLeaks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+trackForMemoryLeaks.swift"; sourceTree = "<group>"; };
 		FA0FAFD92B02BE2E00804B3A /* TopRatedMoviesCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesCellViewModelTests.swift; sourceTree = "<group>"; };
+		FA0FAFDF2B02D09A00804B3A /* UserScoreRatingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScoreRatingViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				FA0FAFD92B02BE2E00804B3A /* TopRatedMoviesCellViewModelTests.swift */,
+				FA0FAFDF2B02D09A00804B3A /* UserScoreRatingViewModelTests.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0FAFDA2B02BE2E00804B3A /* TopRatedMoviesCellViewModelTests.swift in Sources */,
+				FA0FAFE02B02D09A00804B3A /* UserScoreRatingViewModelTests.swift in Sources */,
 				FA0FAFD72B02BCB300804B3A /* XCTestCase+trackForMemoryLeaks.swift in Sources */,
 				FA0FAFCD2B02B40000804B3A /* InMemoryImageCacheTests.swift in Sources */,
 			);
