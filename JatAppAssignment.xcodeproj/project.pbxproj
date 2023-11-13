@@ -15,6 +15,7 @@
 		FA0FAF812B02240800804B3A /* UserScoreRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF802B02240800804B3A /* UserScoreRatingView.swift */; };
 		FA0FAF8D2B0227C500804B3A /* UIColor+adjustBrightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF8C2B0227C500804B3A /* UIColor+adjustBrightness.swift */; };
 		FA0FAF902B02289C00804B3A /* UserScoreRatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF8F2B02289C00804B3A /* UserScoreRatingViewModel.swift */; };
+		FA0FAF932B022A1100804B3A /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF922B022A1100804B3A /* Design.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FA0FAF802B02240800804B3A /* UserScoreRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScoreRatingView.swift; sourceTree = "<group>"; };
 		FA0FAF8C2B0227C500804B3A /* UIColor+adjustBrightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+adjustBrightness.swift"; sourceTree = "<group>"; };
 		FA0FAF8F2B02289C00804B3A /* UserScoreRatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScoreRatingViewModel.swift; sourceTree = "<group>"; };
+		FA0FAF922B022A1100804B3A /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				FA0FAF8B2B0227B800804B3A /* Extensions */,
+				FA0FAF912B022A0500804B3A /* Presentation */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -119,6 +122,14 @@
 				FA0FAF8F2B02289C00804B3A /* UserScoreRatingViewModel.swift */,
 			);
 			path = Feature;
+			sourceTree = "<group>";
+		};
+		FA0FAF912B022A0500804B3A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FAF922B022A1100804B3A /* Design.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0FAF6C2B02182600804B3A /* TopRatedMoviesViewController.swift in Sources */,
+				FA0FAF932B022A1100804B3A /* Design.swift in Sources */,
 				FA0FAF682B02182600804B3A /* AppDelegate.swift in Sources */,
 				FA0FAF6A2B02182600804B3A /* SceneDelegate.swift in Sources */,
 				FA0FAF902B02289C00804B3A /* UserScoreRatingViewModel.swift in Sources */,
