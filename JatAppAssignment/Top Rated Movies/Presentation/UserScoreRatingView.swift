@@ -21,6 +21,16 @@ class UserScoreRatingView: UIView {
         return label
     }()
     
+    private var circlePath: UIBezierPath {
+        UIBezierPath(
+            arcCenter: .init(x: frame.size.width / 2, y: frame.size.height / 2),
+            radius: frame.size.width / 2,
+            startAngle: -.pi / 2,
+            endAngle: 3 * .pi / 2,
+            clockwise: true
+        )
+    }
+    
     // MARK: - Public properties
     var value: Double = 0 {
         didSet {
@@ -44,16 +54,17 @@ class UserScoreRatingView: UIView {
         configureView()
     }
     
+    // MARK: - Life cycle
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        circleLayer.path = circlePath.cgPath
+        circularBackgroundLayer.path = circlePath.cgPath
+        circularForegroundLayer.path = circlePath.cgPath
+    }
+    
     // MARK: - Private methods
     private func configureView() {
-        let circlePath = UIBezierPath(
-            arcCenter: .init(x: frame.size.width / 2, y: frame.size.height / 2),
-            radius: frame.size.width / 2,
-            startAngle: -.pi / 2,
-            endAngle: 3 * .pi / 2,
-            clockwise: true
-        )
-        
         circleLayer.fillColor = UIColor.backgroundUserScore.cgColor
         circleLayer.path = circlePath.cgPath
         

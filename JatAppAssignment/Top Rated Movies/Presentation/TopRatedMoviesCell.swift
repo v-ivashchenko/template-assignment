@@ -18,7 +18,7 @@ class TopRatedMoviesCell: UITableViewCell {
     }()
     
     private let userScoreView: UserScoreRatingView = {
-        let view = UserScoreRatingView(frame: .init(x: 0, y: 0, width: 48, height: 48))
+        let view = UserScoreRatingView()
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
