@@ -13,6 +13,7 @@
 		FA0FAF712B02182700804B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0FAF702B02182700804B3A /* Assets.xcassets */; };
 		FA0FAF742B02182700804B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0FAF722B02182700804B3A /* LaunchScreen.storyboard */; };
 		FA0FAF812B02240800804B3A /* UserScoreRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF802B02240800804B3A /* UserScoreRatingView.swift */; };
+		FA0FAF8D2B0227C500804B3A /* UIColor+adjustBrightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF8C2B0227C500804B3A /* UIColor+adjustBrightness.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FA0FAF732B02182700804B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA0FAF752B02182700804B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0FAF802B02240800804B3A /* UserScoreRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScoreRatingView.swift; sourceTree = "<group>"; };
+		FA0FAF8C2B0227C500804B3A /* UIColor+adjustBrightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+adjustBrightness.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FA0FAF752B02182700804B3A /* Info.plist */,
 				FA0FAF672B02182600804B3A /* AppDelegate.swift */,
 				FA0FAF692B02182600804B3A /* SceneDelegate.swift */,
+				FA0FAF8A2B0227AE00804B3A /* Shared */,
 				FA0FAF7B2B02184400804B3A /* Supporting Files */,
 				FA0FAF7C2B021FCD00804B3A /* Top Rated Movies */,
 			);
@@ -89,6 +92,22 @@
 				FA0FAF802B02240800804B3A /* UserScoreRatingView.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FA0FAF8A2B0227AE00804B3A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FAF8B2B0227B800804B3A /* Extensions */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FA0FAF8B2B0227B800804B3A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FAF8C2B0227C500804B3A /* UIColor+adjustBrightness.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +184,7 @@
 				FA0FAF682B02182600804B3A /* AppDelegate.swift in Sources */,
 				FA0FAF6A2B02182600804B3A /* SceneDelegate.swift in Sources */,
 				FA0FAF812B02240800804B3A /* UserScoreRatingView.swift in Sources */,
+				FA0FAF8D2B0227C500804B3A /* UIColor+adjustBrightness.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
