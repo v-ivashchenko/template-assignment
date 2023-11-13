@@ -14,6 +14,7 @@
 		FA0FAF742B02182700804B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0FAF722B02182700804B3A /* LaunchScreen.storyboard */; };
 		FA0FAF812B02240800804B3A /* UserScoreRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF802B02240800804B3A /* UserScoreRatingView.swift */; };
 		FA0FAF8D2B0227C500804B3A /* UIColor+adjustBrightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF8C2B0227C500804B3A /* UIColor+adjustBrightness.swift */; };
+		FA0FAF902B02289C00804B3A /* UserScoreRatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF8F2B02289C00804B3A /* UserScoreRatingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FA0FAF752B02182700804B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0FAF802B02240800804B3A /* UserScoreRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScoreRatingView.swift; sourceTree = "<group>"; };
 		FA0FAF8C2B0227C500804B3A /* UIColor+adjustBrightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+adjustBrightness.swift"; sourceTree = "<group>"; };
+		FA0FAF8F2B02289C00804B3A /* UserScoreRatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScoreRatingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		FA0FAF7C2B021FCD00804B3A /* Top Rated Movies */ = {
 			isa = PBXGroup;
 			children = (
+				FA0FAF8E2B02289500804B3A /* Feature */,
 				FA0FAF7D2B021FE400804B3A /* Presentation */,
 			);
 			path = "Top Rated Movies";
@@ -108,6 +111,14 @@
 				FA0FAF8C2B0227C500804B3A /* UIColor+adjustBrightness.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA0FAF8E2B02289500804B3A /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FAF8F2B02289C00804B3A /* UserScoreRatingViewModel.swift */,
+			);
+			path = Feature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 				FA0FAF6C2B02182600804B3A /* TopRatedMoviesViewController.swift in Sources */,
 				FA0FAF682B02182600804B3A /* AppDelegate.swift in Sources */,
 				FA0FAF6A2B02182600804B3A /* SceneDelegate.swift in Sources */,
+				FA0FAF902B02289C00804B3A /* UserScoreRatingViewModel.swift in Sources */,
 				FA0FAF812B02240800804B3A /* UserScoreRatingView.swift in Sources */,
 				FA0FAF8D2B0227C500804B3A /* UIColor+adjustBrightness.swift in Sources */,
 			);

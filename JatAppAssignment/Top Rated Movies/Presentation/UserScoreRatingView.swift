@@ -22,7 +22,16 @@ class UserScoreRatingView: UIView {
     }()
     
     // MARK: - Public properties
-    var value: Double = 0
+    var value: Double = 0 {
+        didSet {
+            let viewModel = UserScoreRatingViewModel(value: value)
+            
+            valueLabel.text = viewModel.ratingString
+            circularBackgroundLayer.strokeColor = viewModel.backgroundColor
+            circularForegroundLayer.strokeColor = viewModel.foregroundColor
+            circularForegroundLayer.strokeEnd = viewModel.circlularValue
+        }
+    }
     
     // MARK: - Initialization
     override init(frame: CGRect) {
