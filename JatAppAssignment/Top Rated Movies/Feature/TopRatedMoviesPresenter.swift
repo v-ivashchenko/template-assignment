@@ -2,16 +2,16 @@
 //  Copyright © 2023 Vitalii Ivashchenko. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class TopRatedMoviesPresenter {
     
     // MARK: - Private properties
     private let client: HTTPClient
     
-    private var movies = [TopRatedMoviesCellViewModel]()
-    
     // MARK: - Public properties
+    private(set) var movies = [TopRatedMoviesCellViewModel]()
+    
     weak var view: TopRatedMoviesViewProtocol?
     
     // MARK: - Initialization
@@ -24,8 +24,19 @@ class TopRatedMoviesPresenter {
         movies.count
     }
     
-    func cellForRowAt(indexPath: IndexPath) -> TopRatedMoviesCellViewModel {
-        movies[indexPath.row]
+    func cellForRowAt(
+        indexPath: IndexPath,
+        imageLoadingCompletion: @escaping (UIImage) -> Void
+    ) -> TopRatedMoviesCellViewModel {
+        Task {
+            let image = try await loadImage(at: indexPath)
+            
+            await MainActor.run {
+                imageLoadingCompletion(image)
+            }
+        }
+        
+        return movies[indexPath.row]
     }
     
     func loadMovies() {
@@ -46,5 +57,19 @@ class TopRatedMoviesPresenter {
                 view?.stopLoading()
             }
         }
+    }
+    
+    // MARK: - Private methods
+    private func loadImage(at indexPath: IndexPath) async throws -> UIImage {
+        let movie = movies[indexPath.row]
+        let (data, response) = try await client.data(for: GetImageRequest.request(size: .medium, filePath: movie.imagePath))
+        let imageData = try GetImageMapper.map(data: data, from: response)
+        let image = UIImage(data: imageData)!
+        
+        var viewModel = movie
+        viewModel.image = image
+        movies[indexPath.row] = viewModel
+        
+        return image
     }
 }

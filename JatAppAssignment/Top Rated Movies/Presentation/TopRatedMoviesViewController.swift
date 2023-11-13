@@ -5,7 +5,7 @@
 import UIKit
 
 class TopRatedMoviesViewController: UIViewController {
-
+    
     // MARK: - Private properties
     private let tableView = UITableView()
     private let refreshControl = UIRefreshControl()
@@ -95,7 +95,10 @@ extension TopRatedMoviesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TopRatedMoviesCell.reuseIdentifier, for: indexPath) as! TopRatedMoviesCell
         
-        cell.configure(with: presenter.cellForRowAt(indexPath: indexPath))
+        let cellViewModel = presenter.cellForRowAt(indexPath: indexPath) { image in
+            cell.updateImage(image)
+        }
+        cell.configure(with: cellViewModel)
         
         return cell
     }
@@ -107,7 +110,7 @@ extension TopRatedMoviesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let movie = presenter.cellForRowAt(indexPath: indexPath)
+        let movie = presenter.movies[indexPath.row]
         guard let viewController = onSelectMovie?(movie) else { return }
         show(viewController, sender: self)
     }

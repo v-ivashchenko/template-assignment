@@ -75,6 +75,10 @@ class TopRatedMoviesCell: UITableViewCell {
         characterOccurrencesLabel.text = viewModel.characterOccurrences
     }
     
+    func updateImage(_ image: UIImage) {
+        posterImageView.image = image
+    }
+    
     // MARK: - Private methods
     private func configureView() {
         addSubview(posterImageView)
