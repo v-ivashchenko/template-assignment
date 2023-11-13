@@ -28,6 +28,7 @@
 		FA0FAFB72B02531500804B3A /* GetImageMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFB62B02531500804B3A /* GetImageMapper.swift */; };
 		FA0FAFB92B02531F00804B3A /* GetImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFB82B02531F00804B3A /* GetImageRequest.swift */; };
 		FA0FAFBB2B02539800804B3A /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFBA2B02539800804B3A /* HTTPClient.swift */; };
+		FA0FAFBD2B0253C600804B3A /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFBC2B0253C600804B3A /* URLSessionHTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		FA0FAFB62B02531500804B3A /* GetImageMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImageMapper.swift; sourceTree = "<group>"; };
 		FA0FAFB82B02531F00804B3A /* GetImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImageRequest.swift; sourceTree = "<group>"; };
 		FA0FAFBA2B02539800804B3A /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		FA0FAFBC2B0253C600804B3A /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				FA0FAFBA2B02539800804B3A /* HTTPClient.swift */,
+				FA0FAFBC2B0253C600804B3A /* URLSessionHTTPClient.swift */,
 				FA0FAFAF2B0251B800804B3A /* Endpoints */,
 			);
 			path = API;
@@ -305,6 +308,7 @@
 				FA0FAF972B022A9500804B3A /* TopRatedMoviesCellViewModel.swift in Sources */,
 				FA0FAF952B022A4C00804B3A /* TopRatedMoviesCell.swift in Sources */,
 				FA0FAFB42B02521900804B3A /* GetTopRatedMoviesRequest.swift in Sources */,
+				FA0FAFBD2B0253C600804B3A /* URLSessionHTTPClient.swift in Sources */,
 				FA0FAF902B02289C00804B3A /* UserScoreRatingViewModel.swift in Sources */,
 				FA0FAF812B02240800804B3A /* UserScoreRatingView.swift in Sources */,
 				FA0FAFAD2B024C6B00804B3A /* TopRatedMoviesViewProtocol.swift in Sources */,
