@@ -16,6 +16,8 @@
 		FA0FAF8D2B0227C500804B3A /* UIColor+adjustBrightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF8C2B0227C500804B3A /* UIColor+adjustBrightness.swift */; };
 		FA0FAF902B02289C00804B3A /* UserScoreRatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF8F2B02289C00804B3A /* UserScoreRatingViewModel.swift */; };
 		FA0FAF932B022A1100804B3A /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF922B022A1100804B3A /* Design.swift */; };
+		FA0FAF952B022A4C00804B3A /* TopRatedMoviesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF942B022A4C00804B3A /* TopRatedMoviesCell.swift */; };
+		FA0FAF972B022A9500804B3A /* TopRatedMoviesCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAF962B022A9500804B3A /* TopRatedMoviesCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		FA0FAF8C2B0227C500804B3A /* UIColor+adjustBrightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+adjustBrightness.swift"; sourceTree = "<group>"; };
 		FA0FAF8F2B02289C00804B3A /* UserScoreRatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScoreRatingViewModel.swift; sourceTree = "<group>"; };
 		FA0FAF922B022A1100804B3A /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
+		FA0FAF942B022A4C00804B3A /* TopRatedMoviesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesCell.swift; sourceTree = "<group>"; };
+		FA0FAF962B022A9500804B3A /* TopRatedMoviesCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		FA0FAF7D2B021FE400804B3A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FA0FAF942B022A4C00804B3A /* TopRatedMoviesCell.swift */,
 				FA0FAF6B2B02182600804B3A /* TopRatedMoviesViewController.swift */,
 				FA0FAF802B02240800804B3A /* UserScoreRatingView.swift */,
 			);
@@ -119,6 +124,7 @@
 		FA0FAF8E2B02289500804B3A /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				FA0FAF962B022A9500804B3A /* TopRatedMoviesCellViewModel.swift */,
 				FA0FAF8F2B02289C00804B3A /* UserScoreRatingViewModel.swift */,
 			);
 			path = Feature;
@@ -206,6 +212,8 @@
 				FA0FAF932B022A1100804B3A /* Design.swift in Sources */,
 				FA0FAF682B02182600804B3A /* AppDelegate.swift in Sources */,
 				FA0FAF6A2B02182600804B3A /* SceneDelegate.swift in Sources */,
+				FA0FAF972B022A9500804B3A /* TopRatedMoviesCellViewModel.swift in Sources */,
+				FA0FAF952B022A4C00804B3A /* TopRatedMoviesCell.swift in Sources */,
 				FA0FAF902B02289C00804B3A /* UserScoreRatingViewModel.swift in Sources */,
 				FA0FAF812B02240800804B3A /* UserScoreRatingView.swift in Sources */,
 				FA0FAF8D2B0227C500804B3A /* UIColor+adjustBrightness.swift in Sources */,

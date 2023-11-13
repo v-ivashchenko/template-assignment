@@ -25,7 +25,7 @@ class TopRatedMoviesViewController: UIViewController {
     
     private func configureTableView() {
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        tableView.register(TopRatedMoviesCell.self, forCellReuseIdentifier: TopRatedMoviesCell.reuseIdentifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(tableView)
@@ -47,9 +47,9 @@ extension TopRatedMoviesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TopRatedMoviesCell.reuseIdentifier, for: indexPath) as! TopRatedMoviesCell
         
-        cell.textLabel?.text = String(indexPath.row)
+        cell.configure(with: .init(title: "Title", imagePath: "", rating: 5))
         
         return cell
     }
