@@ -13,8 +13,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
         
         let client = URLSessionHTTPClient()
+        let authorizedHTTPClient = AuthorizedHTTPClient(client: client)
         let imageCache = InMemoryImageCache()
-        let presenter = TopRatedMoviesPresenter(client: client, imageCache: imageCache)
+        let presenter = TopRatedMoviesPresenter(client: authorizedHTTPClient, imageCache: imageCache)
         let viewController = TopRatedMoviesViewController(presenter: presenter)
         viewController.onSelectMovie = { movie in
             let viewModel = TopRatedMoviesDetailViewModel(title: movie.title, image: movie.image, rating: movie.rating)
