@@ -35,6 +35,7 @@
 		FA0FAFD72B02BCB300804B3A /* XCTestCase+trackForMemoryLeaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFD62B02BCB300804B3A /* XCTestCase+trackForMemoryLeaks.swift */; };
 		FA0FAFDA2B02BE2E00804B3A /* TopRatedMoviesCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFD92B02BE2E00804B3A /* TopRatedMoviesCellViewModelTests.swift */; };
 		FA0FAFE02B02D09A00804B3A /* UserScoreRatingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFDF2B02D09A00804B3A /* UserScoreRatingViewModelTests.swift */; };
+		FA0FAFE22B036E5400804B3A /* AuthorizedHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FAFE12B036E5400804B3A /* AuthorizedHTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		FA0FAFD62B02BCB300804B3A /* XCTestCase+trackForMemoryLeaks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+trackForMemoryLeaks.swift"; sourceTree = "<group>"; };
 		FA0FAFD92B02BE2E00804B3A /* TopRatedMoviesCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesCellViewModelTests.swift; sourceTree = "<group>"; };
 		FA0FAFDF2B02D09A00804B3A /* UserScoreRatingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScoreRatingViewModelTests.swift; sourceTree = "<group>"; };
+		FA0FAFE12B036E5400804B3A /* AuthorizedHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedHTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 		FA0FAFAE2B02517F00804B3A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				FA0FAFE12B036E5400804B3A /* AuthorizedHTTPClient.swift */,
 				FA0FAFBA2B02539800804B3A /* HTTPClient.swift */,
 				FA0FAFBC2B0253C600804B3A /* URLSessionHTTPClient.swift */,
 				FA0FAFAF2B0251B800804B3A /* Endpoints */,
@@ -438,6 +441,7 @@
 				FA0FAF812B02240800804B3A /* UserScoreRatingView.swift in Sources */,
 				FA0FAFAD2B024C6B00804B3A /* TopRatedMoviesViewProtocol.swift in Sources */,
 				FA0FAFA42B0246ED00804B3A /* UserScoreRatingViewRepresentable.swift in Sources */,
+				FA0FAFE22B036E5400804B3A /* AuthorizedHTTPClient.swift in Sources */,
 				FA0FAFA72B02483B00804B3A /* TopRatedMoviesDetailViewModel.swift in Sources */,
 				FA0FAFB22B02520900804B3A /* GetTopRatedMoviesMapper.swift in Sources */,
 				FA0FAFBB2B02539800804B3A /* HTTPClient.swift in Sources */,
