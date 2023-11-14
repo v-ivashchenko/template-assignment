@@ -24,9 +24,11 @@ Create an application with a list of movies using TMDB service [API](https://dev
 - [ ] Remote search
 
 ## Demonstration
-[](README/img1.png)
-[](README/img2.png)
-[](README/img3.png)
+<p>
+  <img src='README/img1.png' width='300'>
+  <img src='README/img2.png' width='300'>
+  <img src='README/img3.png' width='300'>
+</p>
 
 ## Prerequisites
 - Xcode 15+: I'm using `ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS` setting
