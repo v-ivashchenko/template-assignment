@@ -11,6 +11,7 @@ class TopRatedMoviesPresenter {
     private let imageCache: ImageCache
     
     private var movies = [TopRatedMoviesCellViewModel]()
+    private let queue = DispatchQueue(label: Bundle.main.bundleIdentifier ?? "")
     
     // MARK: - Public properties
     private(set) var filteredMovies = [TopRatedMoviesCellViewModel]()
@@ -52,10 +53,12 @@ class TopRatedMoviesPresenter {
             let (data, response) = try await client.data(for: GetTopRatedMoviesRequest.request())
             let movies = try GetTopRatedMoviesMapper.map(data: data, from: response)
             
-            self.movies = movies.results.map {
-                .init(title: $0.title, imagePath: $0.posterPath, rating: $0.voteAverage)
+            queue.sync {
+                self.movies = movies.results.map {
+                    .init(title: $0.title, imagePath: $0.posterPath, rating: $0.voteAverage)
+                }
+                filteredMovies = self.movies
             }
-            self.filteredMovies = self.movies
             
             await MainActor.run {
                 view?.reloadData()
@@ -65,43 +68,64 @@ class TopRatedMoviesPresenter {
     }
     
     func filter(by searchText: String) {
-        if searchText.isEmpty {
+        DispatchQueue.global().async {
+            self.queue.sync {
+                if searchText.isEmpty {
+                    self.filteredMovies = self.movies
+                } else {
+                    self.filteredMovies = self.movies
+                        .filter { $0.title.lowercased().contains(searchText.lowercased()) }
+                }
+            }
+            
+            DispatchQueue.main.async {
+                self.view?.reloadData()
+            }
+        }
+    }
+    
+    func resetSearch() {
+        queue.sync {
             filteredMovies = movies
-        } else {
-            filteredMovies = movies
-                .filter { $0.title.lowercased().contains(searchText.lowercased()) }
         }
         
         view?.reloadData()
     }
     
-    func resetSearch() {
-        filteredMovies = movies
-        view?.reloadData()
-    }
-    
     // MARK: - Private methods
     private func loadImage(at indexPath: IndexPath) async throws -> UIImage {
-        let movie = filteredMovies[indexPath.row]
+        let movie = queue.sync {
+            filteredMovies[indexPath.row]
+        }
         
         if let image = try await imageCache.image(by: movie.imagePath) {
-            var viewModel = movie
-            viewModel.image = image
-            filteredMovies[indexPath.row] = viewModel
+            assignImage(image, at: indexPath, for: movie)
             
             return image
         } else {
             let (data, response) = try await client.data(for: GetImageRequest.request(size: .small, filePath: movie.imagePath))
             let imageData = try GetImageMapper.map(data: data, from: response)
-            let image = UIImage(data: imageData)!
+            let image = UIImage(data: imageData) ?? UIImage()
             
             try await imageCache.setImage(image, by: movie.imagePath)
-            
-            var viewModel = movie
-            viewModel.image = image
-            filteredMovies[indexPath.row] = viewModel
+            assignImage(image, at: indexPath, for: movie)
             
             return image
+        }
+    }
+    
+    private func assignImage(_ image: UIImage, at indexPath: IndexPath, for movie: TopRatedMoviesCellViewModel) {
+        queue.sync {
+            var viewModel = movie
+            viewModel.image = image
+            
+            if let index = movies.firstIndex(where: { $0.imagePath == movie.imagePath }) {
+                movies[index] = viewModel
+            }
+            
+            if let index = self.filteredMovies.firstIndex(where: { $0.imagePath == movie.imagePath }) {
+                self.filteredMovies[index] = viewModel
+            }
         }
     }
 }
