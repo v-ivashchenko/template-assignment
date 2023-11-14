@@ -25,9 +25,9 @@ Create an application with a list of movies using TMDB service [API](https://dev
 
 ## Demonstration
 <p>
-  <img src='README/img1.png' width='300'>
-  <img src='README/img2.png' width='300'>
-  <img src='README/img3.png' width='300'>
+  <img src='README/img1.png' width='250'>
+  <img src='README/img2.png' width='250'>
+  <img src='README/img3.png' width='250'>
 </p>
 
 ## Prerequisites
@@ -59,4 +59,4 @@ Create an application with a list of movies using TMDB service [API](https://dev
 
 ## Bugs
 > **Note.**
-> I have to mention that I've discovered at least one bug that I couldn't fix quickly. If on a clean device press very fast on the search and start typing - it can crash with the `Index out of bounds exceptions` or start consuming a lot of RAM.
+> I want to mention that I've discovered at least one bug that I couldn't fix quickly. If on a clean device press very fast on the search and start typing - it may start consuming numerous amount of RAM
