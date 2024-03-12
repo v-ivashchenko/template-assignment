@@ -25,9 +25,9 @@ Create an application with a list of movies using TMDB service [API](https://dev
 
 ## Demonstration
 <p>
-  <img src='README/img1.png' width='300'>
-  <img src='README/img2.png' width='300'>
-  <img src='README/img3.png' width='300'>
+  <img src='README/img1.png' width='250'>
+  <img src='README/img2.png' width='250'>
+  <img src='README/img3.png' width='250'>
 </p>
 
 ## Prerequisites
