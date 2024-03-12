@@ -17,7 +17,7 @@ class AuthorizedHTTPClient: HTTPClient {
     // MARK: - Public methods
     func data(for request: URLRequest) async throws -> (Data, HTTPURLResponse) {
         var request = request
-        request.setValue("Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNGYwMmQwMWQ4Y2FhNDhkY2Y0NTU4NmNjOWJhOTIwMSIsInN1YiI6IjY1NGZkNDRkNjdiNjEzMDBjODRiNzg0NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yyZIdrsV1NDZPL9lHdQdQenL007bfe4IOCeZQR4AMLw", forHTTPHeaderField: "Authorization")
+        request.setValue("YOUR_OWN_BEARER_TOKEN", forHTTPHeaderField: "Authorization")
         
         return try await client.data(for: request)
     }
