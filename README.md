@@ -1,4 +1,4 @@
-# JatApp. Assignment
+# Template Assignment
 
 ## Task
 Create an application with a list of movies using TMDB service [API](https://developer.themoviedb.org/docs).
@@ -33,18 +33,18 @@ Create an application with a list of movies using TMDB service [API](https://dev
 ## Prerequisites
 - Xcode 15+: I'm using `ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS` setting
 - iOS 16+: as far as I know that's a common practice to support the last two versions of iOS (unless otherwise stated)
+- In order to use the project correctly you have to generate your own `Bearer` token (or you can ask the author to generate a temporary one) in the `AuthorizedHTTPClient` component
 
 ## Developer's notes
 
 ### API
 - API layer contains main `HTTPClient` protocol which I'm utilizing in the composition root (`SceneDelegate`). As well as `Decorator` pattern to wrap the `URLSessionHTTPClient` class in order not to pollute requests with authorization details
-- Just for simplicity from the interviewer's side I decided to "sew up" the access token right in the program's `AuthorizedHTTPClient` component
-- Each endpoint I split to two components: a request and a mapper (this way I was trying to follow the `SRP` principle)
+- Each endpoint I split into two components: a request and a mapper (this way I was trying to follow the `SRP` principle)
 
 ### Architecture of the feature
 - I was trying to accomplish this task using `Dependency Injection` as the best pattern in my opinion and cover concrete implementations with appropriate protocols
 - **Why not `MVC`?**. Because the view controller already contains too much logic such as: configuring itself, table view etc.; responds to different table view and search data sources and delegates
-- **Why `MVP` and not `MVVM` or something else?**. `VIPER`+ would be too much for this simple application. Between `MVP` and `MVVM` I decided to choose `MVP` because on this vacancy there's a clear mention about `MVP` and I wanted to show you my ability to work with this pattern
+- **Why `MVP` and not `MVVM` or something else?**. `VIPER`+ would be too much for this simple application. I decided to choose `MVP` just to show my ability to work with this pattern (`MVVM` would be appropriate as well practically with no meaningful differences)
 - **Navigation**. In order to decouple the `TopRatedMoviesViewController` from specific detail view controller, I decided to create the `onSelect` closure and pass this decision to the composition root
 
 ### Persistence
@@ -55,7 +55,7 @@ Create an application with a list of movies using TMDB service [API](https://dev
 ### Presentation
 - Vast majority of the project is made on `UIKit` without storyboards. However, I don't mind to use them. Depends on a team's preferences
 - Detail screen is made using `SwiftUI` with a `UIViewRepresentable` component (`UserScoreRatingView`) which was used in the `UIKit`'s version
-- In this project I don't pay any attention to the error handling on UI. However, it wouldn't be much effort to fulfill UI with it if there will be such a task
+- In this project I don't pay any attention to the error handling on UI. However, it wouldn't be much effort to fulfil UI with it if there will be such a task
 
 ## Bugs
 > **Note.**
