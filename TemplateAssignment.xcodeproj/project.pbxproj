@@ -49,7 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA0FAF642B02182600804B3A /* JatAppAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JatAppAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0FAF642B02182600804B3A /* TemplateAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemplateAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0FAF672B02182600804B3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA0FAF692B02182600804B3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA0FAF6B2B02182600804B3A /* TopRatedMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		FA0FAFBC2B0253C600804B3A /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		FA0FAFC12B027F9D00804B3A /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		FA0FAFC32B02823500804B3A /* InMemoryImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryImageCache.swift; sourceTree = "<group>"; };
-		FA0FAFCA2B02B40000804B3A /* JatAppAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JatAppAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0FAFCA2B02B40000804B3A /* TemplateAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemplateAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0FAFCC2B02B40000804B3A /* InMemoryImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryImageCacheTests.swift; sourceTree = "<group>"; };
 		FA0FAFD62B02BCB300804B3A /* XCTestCase+trackForMemoryLeaks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+trackForMemoryLeaks.swift"; sourceTree = "<group>"; };
 		FA0FAFD92B02BE2E00804B3A /* TopRatedMoviesCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesCellViewModelTests.swift; sourceTree = "<group>"; };
@@ -104,8 +104,8 @@
 		FA0FAF5B2B02182600804B3A = {
 			isa = PBXGroup;
 			children = (
-				FA0FAF662B02182600804B3A /* JatAppAssignment */,
-				FA0FAFCB2B02B40000804B3A /* JatAppAssignmentTests */,
+				FA0FAF662B02182600804B3A /* TemplateAssignment */,
+				FA0FAFCB2B02B40000804B3A /* TemplateAssignmentTests */,
 				FA0FAF652B02182600804B3A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,13 +113,13 @@
 		FA0FAF652B02182600804B3A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA0FAF642B02182600804B3A /* JatAppAssignment.app */,
-				FA0FAFCA2B02B40000804B3A /* JatAppAssignmentTests.xctest */,
+				FA0FAF642B02182600804B3A /* TemplateAssignment.app */,
+				FA0FAFCA2B02B40000804B3A /* TemplateAssignmentTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA0FAF662B02182600804B3A /* JatAppAssignment */ = {
+		FA0FAF662B02182600804B3A /* TemplateAssignment */ = {
 			isa = PBXGroup;
 			children = (
 				FA0FAF752B02182700804B3A /* Info.plist */,
@@ -130,7 +130,7 @@
 				FA0FAF7C2B021FCD00804B3A /* Top Rated Movies */,
 				FA0FAFA12B0246D700804B3A /* Top Rated Movies Detail */,
 			);
-			path = JatAppAssignment;
+			path = TemplateAssignment;
 			sourceTree = "<group>";
 		};
 		FA0FAF7B2B02184400804B3A /* Supporting Files */ = {
@@ -280,13 +280,13 @@
 			path = Implementations;
 			sourceTree = "<group>";
 		};
-		FA0FAFCB2B02B40000804B3A /* JatAppAssignmentTests */ = {
+		FA0FAFCB2B02B40000804B3A /* TemplateAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
 				FA0FAFD52B02BC9D00804B3A /* Shared */,
 				FA0FAFD32B02B5E100804B3A /* Top Rated Movies */,
 			);
-			path = JatAppAssignmentTests;
+			path = TemplateAssignmentTests;
 			sourceTree = "<group>";
 		};
 		FA0FAFD32B02B5E100804B3A /* Top Rated Movies */ = {
@@ -326,9 +326,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA0FAF632B02182600804B3A /* JatAppAssignment */ = {
+		FA0FAF632B02182600804B3A /* TemplateAssignment */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA0FAF782B02182700804B3A /* Build configuration list for PBXNativeTarget "JatAppAssignment" */;
+			buildConfigurationList = FA0FAF782B02182700804B3A /* Build configuration list for PBXNativeTarget "TemplateAssignment" */;
 			buildPhases = (
 				FA0FAF602B02182600804B3A /* Sources */,
 				FA0FAF612B02182600804B3A /* Frameworks */,
@@ -338,14 +338,14 @@
 			);
 			dependencies = (
 			);
-			name = JatAppAssignment;
+			name = TemplateAssignment;
 			productName = JatAppAssignment;
-			productReference = FA0FAF642B02182600804B3A /* JatAppAssignment.app */;
+			productReference = FA0FAF642B02182600804B3A /* TemplateAssignment.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FA0FAFC92B02B40000804B3A /* JatAppAssignmentTests */ = {
+		FA0FAFC92B02B40000804B3A /* TemplateAssignmentTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA0FAFD22B02B40000804B3A /* Build configuration list for PBXNativeTarget "JatAppAssignmentTests" */;
+			buildConfigurationList = FA0FAFD22B02B40000804B3A /* Build configuration list for PBXNativeTarget "TemplateAssignmentTests" */;
 			buildPhases = (
 				FA0FAFC62B02B40000804B3A /* Sources */,
 				FA0FAFC72B02B40000804B3A /* Frameworks */,
@@ -356,9 +356,9 @@
 			dependencies = (
 				FA0FAFCF2B02B40000804B3A /* PBXTargetDependency */,
 			);
-			name = JatAppAssignmentTests;
+			name = TemplateAssignmentTests;
 			productName = JatAppAssignmentTests;
-			productReference = FA0FAFCA2B02B40000804B3A /* JatAppAssignmentTests.xctest */;
+			productReference = FA0FAFCA2B02B40000804B3A /* TemplateAssignmentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -380,7 +380,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FA0FAF5F2B02182600804B3A /* Build configuration list for PBXProject "JatAppAssignment" */;
+			buildConfigurationList = FA0FAF5F2B02182600804B3A /* Build configuration list for PBXProject "TemplateAssignment" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -393,8 +393,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA0FAF632B02182600804B3A /* JatAppAssignment */,
-				FA0FAFC92B02B40000804B3A /* JatAppAssignmentTests */,
+				FA0FAF632B02182600804B3A /* TemplateAssignment */,
+				FA0FAFC92B02B40000804B3A /* TemplateAssignmentTests */,
 			);
 		};
 /* End PBXProject section */
@@ -465,7 +465,7 @@
 /* Begin PBXTargetDependency section */
 		FA0FAFCF2B02B40000804B3A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FA0FAF632B02182600804B3A /* JatAppAssignment */;
+			target = FA0FAF632B02182600804B3A /* TemplateAssignment */;
 			targetProxy = FA0FAFCE2B02B40000804B3A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -610,8 +610,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RY7J7JNFL2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JatAppAssignment/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = JatApp;
+				INFOPLIST_FILE = TemplateAssignment/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Template Assignment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -622,7 +622,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vitalii-ivashchenko.JatAppAssignment";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vitalii-ivashchenko.TemplateAssignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -639,8 +639,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RY7J7JNFL2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JatAppAssignment/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = JatApp;
+				INFOPLIST_FILE = TemplateAssignment/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Template Assignment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -651,7 +651,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vitalii-ivashchenko.JatAppAssignment";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vitalii-ivashchenko.TemplateAssignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -673,7 +673,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JatAppAssignment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JatAppAssignment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TemplateAssignment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TemplateAssignment";
 			};
 			name = Debug;
 		};
@@ -691,14 +691,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JatAppAssignment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JatAppAssignment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TemplateAssignment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TemplateAssignment";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA0FAF5F2B02182600804B3A /* Build configuration list for PBXProject "JatAppAssignment" */ = {
+		FA0FAF5F2B02182600804B3A /* Build configuration list for PBXProject "TemplateAssignment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA0FAF762B02182700804B3A /* Debug */,
@@ -707,7 +707,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA0FAF782B02182700804B3A /* Build configuration list for PBXNativeTarget "JatAppAssignment" */ = {
+		FA0FAF782B02182700804B3A /* Build configuration list for PBXNativeTarget "TemplateAssignment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA0FAF792B02182700804B3A /* Debug */,
@@ -716,7 +716,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA0FAFD22B02B40000804B3A /* Build configuration list for PBXNativeTarget "JatAppAssignmentTests" */ = {
+		FA0FAFD22B02B40000804B3A /* Build configuration list for PBXNativeTarget "TemplateAssignmentTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA0FAFD02B02B40000804B3A /* Debug */,

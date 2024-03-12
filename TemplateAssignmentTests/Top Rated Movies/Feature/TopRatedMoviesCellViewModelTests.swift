@@ -3,7 +3,7 @@
 //
 
 import XCTest
-@testable import JatAppAssignment
+@testable import TemplateAssignment
 
 final class TopRatedMoviesCellViewModelTests: XCTestCase {
 
